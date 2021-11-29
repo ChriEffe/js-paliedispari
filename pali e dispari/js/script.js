@@ -7,13 +7,16 @@ Dichiariamo chi ha vinto
 In un secondo momento creiamo delle funzioni per i numeri random e per il check pari dispari*/
 
 
-let parioDispari = prompt('Pari o dispari?');
-while (parioDispari != 'pari' && parioDispari != 'dispari') {
-    parioDispari = prompt('Pari o Dispari?');
-}
-
-let number = parseInt(prompt('Inserisci un numero da 1 a 5'));
+let parioDispari;   
+do {
+    parioDispari = prompt('Pari o dispari?');
+} while (parioDispari != 'pari' && parioDispari != 'dispari');
 console.log(parioDispari);
+
+let number;
+do {
+    number = parseInt(prompt('Inserisci un numero da 1 a 5'));
+} while (number < 1 || number > 5);
 console.log('Numero utente ' + number);
 
 randomNumber = Math.floor(Math.random() * 6);
@@ -33,3 +36,8 @@ if (parioDispari == sum) {
 } else {
     console.log('Hai perso');
 };
+
+
+function name(params) {
+    
+}
