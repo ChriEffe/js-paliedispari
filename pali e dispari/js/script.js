@@ -8,6 +8,10 @@ In un secondo momento creiamo delle funzioni per i numeri random e per il check 
 
 
 let parioDispari = prompt('Pari o dispari?');
+while (parioDispari != 'pari' && parioDispari != 'dispari') {
+    parioDispari = prompt('Pari o Dispari?');
+}
+
 let number = parseInt(prompt('Inserisci un numero da 1 a 5'));
 console.log(parioDispari);
 console.log('Numero utente ' + number);
@@ -15,7 +19,7 @@ console.log('Numero utente ' + number);
 randomNumber = Math.floor(Math.random() * 6);
 console.log('Numero random ' + randomNumber);
 
-let sum = number += randomNumber
+let sum = number += randomNumber;
 console.log('Risultato ' + sum);
 
 if (sum % 2 != 0) {
