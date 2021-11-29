@@ -19,7 +19,7 @@ do {
 } while (number < 1 || number > 5);
 console.log('Numero utente ' + number);
 
-randomNumber = Math.floor(Math.random() * 6);
+/*randomNumber = Math.floor(Math.random() * 6);
 console.log('Numero random ' + randomNumber);
 
 let sum = number += randomNumber;
@@ -29,15 +29,30 @@ if (sum % 2 != 0) {
     console.log('Dispari');
 } else {
     console.log('Pari');
-};
+}
 
 if (parioDispari == sum) {
     console.log('Hai vinto');
 } else {
     console.log('Hai perso');
-};
+}*/
 
 
-function name(params) {
-    
+function getRndInt(min, max) {
+    return parseInt(Math.floor(Math.random() * (max - min) + min));
 }
+let random = getRndInt(1, 5);
+console.log(random);
+let sum = number + random;
+console.log(sum);
+
+function check(sum1) {
+    if ((parioDispari == 'pari') && (sum1 % 2 == 0)) {
+        console.log('Hai vinto');
+    } else if (((parioDispari == 'dispari') && (sum1 % 2 != 0))) {
+        console.log('Hai vinto');
+    } else {
+        console.log('Hai perso');
+    }
+}
+check(sum)
